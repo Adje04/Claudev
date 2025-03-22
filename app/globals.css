@@ -8,15 +8,6 @@
 
 
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-
-
 .hash-span {
   margin-top: -100px;
   padding-bottom: 100px;
@@ -193,6 +184,10 @@
   }
 }
 
+.cool {
+  color: rgb(124, 65, 252);
+}
+
 @layer base {
   body {
 
@@ -200,13 +195,12 @@
     font-family: "Poppins", "Inter" sans-serif;
     @apply relative p-0 m-0 scroll-smooth bg-primary;
 
-
     &::after {
       @apply content-[''] fixed top-[100px] left-[-100px] w-[200px] h-[300px] bg-radial from-secondary to-transparent brightness-[1.1] contrast-[1.2] blur-[90px] z-[1];
     }
 
     &::before {
-      @apply content-[''] fixed bottom-0 right-0 w-[200px] h-[300px] bg-radial from-primary to-transparent blur-[90px]
+      @apply content-[''] fixed bottom-[-50px] right-[20px] w-[200px] h-[300px] bg-radial from-purple to-transparent brightness-[1.1] contrast-[1.2] blur-[90px] z-[1];
     }
   }
 }
@@ -221,7 +215,7 @@
 
   --color-body: rgb(10, 0, 26);
 
-  --color-blue-50: #0088f8;
+  --color-blue-50: #7c41fc;
   --color-blue-glow: rgba(50, 188, 252, 0.26);
 
   --color-gray-10: #EEEEEE;
@@ -251,8 +245,6 @@
   --shadow-card: 0px 35px 120px -15px #211e35;
 
   --shadow-bw: 0 0 20px rgba(50, 188, 252, 0.26) 0 0 40px rgba(50, 188, 252, 0.26);
-
-
 
   --animation-spotlight: spotlight 2s ease .75s 1 forwards;
 
@@ -298,11 +290,11 @@
 }
 
 @utility hero-head-text {
-  @apply font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[40px] lg:leading-[98px] mt-2;
+  @apply font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[50px] lg:leading-[98px] mt-2;
 }
 
 @utility hero-sub-text {
-  @apply text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px];
+  @apply text-[#dfd9ff] font-medium lg:text-[30px] sm:text-[26px] xs:text-[20px] text-[20px] lg:leading-[40px];
 }
 
 @utility section-head-text {
@@ -314,7 +306,7 @@
 }
 
 @utility btn_yellow {
-  @apply border-white bg-gradient-to-r from-yellow-50 to-blue-50 px-8 py-3 text-black hover:shadow-lg hover:shadow-blue-50 hover:ring-2 hover:ring-blue-50
+  @apply border-white bg-gradient-to-r from-yellow-50 to-blue-50 px-8 py-3 text-black hover:shadow-bw
 }
 
 @utility link-hover {
@@ -323,20 +315,21 @@
 }
 
 @utility my_photo {
-  @apply w-[94%] max-w-[360px] h-auto object-cover rounded-full bg-gradient-to-l from-blue-glow to-yellow-glow mix-blend-screen brightness-[1.1] contrast-[1.2] shadow-[1px_2px_30px_secondary] transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-100 hover:contrast-[120%] active:scale-95;
+  @apply w-[94%] max-w-[360px] h-auto object-cover rounded-full bg-gradient-to-l from-blue-50 to-yellow-50 mix-blend-screen brightness-[1.1] contrast-[1.2] transition-all duration-300 ease-in-out drop-shadow-[1px_2px_30px_#4f46e5] hover:scale-105 hover:brightness-100 hover:contrast-[120%] active:scale-95;
+
 }
 
 
 @utility btn_1 {
-  @apply px-4 py-3 rounded-5xl cursor-pointer text-[16px] text-black bg-primary transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-secondary hover:to-primary hover:text-black hover:shadow-bw
+  @apply px-4 py-3 rounded-5xl cursor-pointer text-black bg-primary transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-secondary hover:to-primary hover:text-black hover:shadow-bw
 }
 
 @utility btn_2 {
-  @applypx-4 py-3 rounded-5xl cursor-pointer text-[16px] bg-secondary text-black transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-secondary hover:to-primary hover:text-black hover:shadow-bw
+  @applypx-4 py-3 rounded-5xl cursor-pointer bg-secondary text-black transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-secondary hover:to-primary hover:text-black hover:shadow-bw
 }
 
 @utility btn_full {
-  @applyw-full px-4 py-3 border-none rounded-5xl bg-gradient-to-r from-secondary to-primary text-black font-[roboto-bold] transition-all duration-300 ease-in-out hover:brightness-110 hover:bg-primary hover:text-white
+  @apply w-full px-4 py-3 border-none rounded-5xl bg-gradient-to-r from-secondary to-primary text-black font-[roboto-bold] transition-all duration-300 ease-in-out hover:brightness-110 hover:bg-primary hover:text-white
 }
 
 
@@ -437,8 +430,6 @@
 @utility bold-16 {
   @apply text-[16px] font-[700];
 }
-
-
 
 
 /* Hide scrollbar for Chrome, Safari and Opera */

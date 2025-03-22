@@ -2,7 +2,7 @@ import Image from "next/image"
 
 type ButtonProps = {
     type: 'button' | 'submit';
-    title: string;
+    title?: string;
     icon?: string;
     variant: string;
     full?: boolean;
@@ -15,12 +15,12 @@ const Button = ({ type, title, icon, variant, full, onClick }: ButtonProps) => {
         <div>
             <button
                 type={type}
-                className={`flex-center gap-2 rounded-full ${variant}  ${full && 'w-full'}`}
+                className={`flex-center gap-2 rounded-full cursor-pointer ${variant}  ${full && 'w-full'}`}
                
                 onClick={onClick}
             >
-                {icon && <Image src={icon} alt={title} width={24} height={24} />}
-                <label htmlFor="" className="regular-16 whitespace-nowrap cursor-pointer"> {title} </label>
+                {icon && <Image src={icon} alt={'buemo'} width={24} height={24} />}
+                <label htmlFor="" className="regular-18 whitespace-nowrap cursor-pointer"> { title} </label>
             </button>
         </div>
     )

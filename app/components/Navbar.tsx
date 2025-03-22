@@ -11,7 +11,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className="bg-primary border-b-2 border-purple flex-between max-container padding-container w-full fixed z-30 py-3">
+    <nav className="bg-primary sticky top-0 border-b-2 border-purple flex-between max-container padding-container  w-full z-30 py-3">
 
       <Link href="/">
         <div className='flex-center gap-2'>
@@ -38,15 +38,15 @@ const Navbar = () => {
       </div>
 
 
-      <div className={`absolute top-full left-0 h-screen lg:h-auto  dark:bg-black   bg-green-100 shadow-md lg:static  w-[250px] lg:w-auto lg:bg-transparent lg:shadow-none lg:flex ${navbar ? 'block' : 'hidden'}`}>
+      <div className={`absolute top-full left-0 h-screen lg:h-auto  dark:bg-black bg-green-100 shadow-md lg:static  w-[250px] lg:w-auto lg:bg-transparent lg:shadow-none lg:flex ${navbar ? 'block' : 'hidden'}`}>
         <ul className="flex flex-col lg:flex-row lg:space-x-6 p-4 lg:p-0">
 
           {NAV_LINKS.map((link) => (
 
-            <li className="text-2xl lg:text-[14px] pb-3 lg:pb-0 text-white lg:px-2  lg:border-b-0 ">
-              <Link key={link.slug}
+            <li key={link.id} className="text-2xl lg:text-[14px] pb-3 lg:pb-0 text-white lg:px-2  lg:border-b-0 ">
+              <Link 
                 href={link.href}
-                className='regular-16 text-gray-50 dark:text-white flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold hover:text-green-50'
+                className='regular-16 text-gray-20 dark:text-white flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold hover:text-green-50 '
                 onClick={() => setNavbar(!navbar)}
               >
                 {link.label}
