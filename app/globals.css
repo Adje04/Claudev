@@ -1,28 +1,11 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
 
-@source 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap';
-
-@source 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap';
-
-
-
-
-.hash-span {
-  margin-top: -100px;
-  padding-bottom: 100px;
-  display: block;
-}
 
 .black-gradient {
   background: #000000;
-  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #434343, #000000);
-
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #434343, #000000);
-
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .violet-gradient {
@@ -36,26 +19,34 @@
   background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
   background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
+.purple-yellow-gradient {
+  background: "#00cea8";
+  background: linear-gradient(90.13deg, #fab432 1.9%, #915EFF 97.5%);
+  background: -webkit-linear-gradient(-90.13deg, #fab432 1.9%, #915EFF 97.5%);
+}
 
 .orange-text-gradient {
   background: #f12711;
-  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #f12711, #f5af19);
-
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to top, #f12711, #f5af19);
-
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .green-text-gradient {
   background: #11998e;
-  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #11998e, #38ef7d);
-  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to top, #11998e, #38ef7d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.yellow-text-gradient {
+  background: #fab432;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #fab432, #ffe75e );
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #fab432, #ffe75e );
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -184,35 +175,37 @@
   }
 }
 
-.cool {
-  color: rgb(124, 65, 252);
-}
 
 @layer base {
+  
   body {
-
     box-sizing: border-box;
-    font-family: "Poppins", "Inter" sans-serif;
+    font-family: "Poppins", "Inter", sans-serif;
     @apply relative p-0 m-0 scroll-smooth bg-primary;
-
+  
     &::after {
-      @apply content-[''] fixed top-[100px] left-[-100px] w-[200px] h-[300px] bg-radial from-secondary to-transparent brightness-[1.1] contrast-[1.2] blur-[90px] z-[1];
+      @apply content-[''] fixed top-[100px] left-[-100px] pointer-events-none z-[0]
+        w-[200px] h-[300px] bg-radial from-secondary to-transparent
+        brightness-[1.1] contrast-[1.2] blur-[90px]
+        sm:w-[100px] sm:h-[150px] sm:top-[80px] sm:left-[-50px];
     }
-
+  
     &::before {
-      @apply content-[''] fixed bottom-[-50px] right-[20px] w-[200px] h-[300px] bg-radial from-purple to-transparent brightness-[1.1] contrast-[1.2] blur-[90px] z-[1];
+      @apply content-[''] fixed bottom-[-50px] right-[20px] pointer-events-none z-[0]
+        w-[200px] h-[300px] bg-radial from-purple to-transparent
+        brightness-[1.1] contrast-[1.2] blur-[90px]
+        sm:w-[100px] sm:h-[150px] sm:bottom-[-30px] sm:right-[10px];
     }
   }
 }
 
 
-
 @theme {
-  /* --breakpoint-xs: 450px; */
+  --breakpoint-xs: 450px; 
+  --breakpoint-xsl: 747px; 
   --breakpoint-3xl: 1680px;
   --breakpoint-4xl: 2200px;
-
-
+  
   --color-body: rgb(10, 0, 26);
 
   --color-blue-50: #7c41fc;
@@ -225,14 +218,10 @@
   --color-gray-90: #141414;
 
   --color-yellow-50: #fab432;
-  --color-yellow-glow: rgba(50, 188, 252, 0.26);
 
   --radius-5xl: 40px;
 
   --container-max-w-10xl: 1512px;
-
-
-  --breakpoint-xs: 450px;
 
   --color-primary: #050816;
   --color-secondary: #aaa6c3;
@@ -246,51 +235,34 @@
 
   --shadow-bw: 0 0 20px rgba(50, 188, 252, 0.26) 0 0 40px rgba(50, 188, 252, 0.26);
 
-  --animation-spotlight: spotlight 2s ease .75s 1 forwards;
 
-  @keyframes spotlight {
-    0% {
-      opacity: 0;
-      transform: translate(-72%, -62%) scale(0.5);
-    }
+}
 
-    100% {
-      opacity: 1;
-      transform: translate(-50%, -40%) scale(1);
-    }
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
 
-  @keyframes bounce {
-
-    0%,
-    100% {
-      transform: translateY(-25%);
-      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-    }
-
-    50% {
-      transform: none;
-      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-    }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
-
-
 }
 
-@utility padding-x {
-  @apply sm:px-16 px-6;
+@utility max-container {
+  @apply mx-auto max-w-[1440px];
 }
 
-@utility padding-y {
-  @apply sm:py-16 py-6;
-}
-
-@utility padding {
-  @apply sm:px-16 px-6 sm:py-16 py-10;
+@utility padding-container {
+  @apply px-6 lg:px-20 3xl:px-0;
 }
 
 @utility hero-head-text {
-  @apply font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[50px] lg:leading-[98px] mt-2;
+  @apply font-black text-white lg:text-[80px] sm:text-[60px] xs:text-[50px] text-[45px] lg:leading-[98px] mt-2
+  max-xs:p-0 max-xs:leading-12;
 }
 
 @utility hero-sub-text {
@@ -306,48 +278,20 @@
 }
 
 @utility btn_yellow {
-  @apply border-white bg-gradient-to-r from-yellow-50 to-blue-50 px-8 py-3 text-black hover:shadow-bw
+  @apply bg-gradient-to-r from-yellow-50 to-blue-50 px-8 py-3 text-black hover:bg-purple hover:shadow-purple ;
 }
 
-@utility link-hover {
-  /* regular-16 p-2 transition-all duration-300 ease-in-out */
-  @apply hover:text-secondary after:content-[''] after:absolute after:w-0 after:h-[3px] after:bg-gradient-to-r after:from-secondary after:to-primary after:bottom-0 after:left-0 after:transition-all after:duration-500 hover:after:w-full before:content-[''] before:absolute before:top-[-10px] before:left-[-40px] before:w-[200%] before:h-[200%] before:bg-radial before:from-yellow-glow before:to-transparent before:blur-[15px] before:opacity-0 hover:before:opacity-100;
+@utility btn_yellow_hover {
+  @apply hover:bg-purple hover:shadow-purple;
 }
 
 @utility my_photo {
-  @apply w-[94%] max-w-[360px] h-auto object-cover rounded-full bg-gradient-to-l from-blue-50 to-yellow-50 mix-blend-screen brightness-[1.1] contrast-[1.2] transition-all duration-300 ease-in-out drop-shadow-[1px_2px_30px_#4f46e5] hover:scale-105 hover:brightness-100 hover:contrast-[120%] active:scale-95;
-
+  @apply w-[94%] max-w-[360px] h-auto object-cover rounded-full bg-gradient-to-l from-blue-50 to-yellow-50 mix-blend-screen brightness-[1.1] contrast-[1.2] transition-all duration-300 ease-in-out drop-shadow-[1px_2px_10px_#4f46e5] hover:scale-105 hover:brightness-100 hover:contrast-[120%] active:scale-95;
 }
 
-
-@utility btn_1 {
-  @apply px-4 py-3 rounded-5xl cursor-pointer text-black bg-primary transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-secondary hover:to-primary hover:text-black hover:shadow-bw
-}
-
-@utility btn_2 {
-  @applypx-4 py-3 rounded-5xl cursor-pointer bg-secondary text-black transition-all duration-300 ease-in-out hover:bg-gradient-to-r hover:from-secondary hover:to-primary hover:text-black hover:shadow-bw
-}
-
-@utility btn_full {
-  @apply w-full px-4 py-3 border-none rounded-5xl bg-gradient-to-r from-secondary to-primary text-black font-[roboto-bold] transition-all duration-300 ease-in-out hover:brightness-110 hover:bg-primary hover:text-white
-}
-
-
-
-@utility max-container {
-  @apply mx-auto max-w-[1440px];
-}
-
-@utility padding-container {
-  @apply px-6 lg:px-20 3xl:px-0;
-}
 
 @utility flex-center {
   @apply flex items-center justify-center;
-}
-
-@utility flex-column {
-  @apply flex flex-col;
 }
 
 @utility flex-between {
@@ -356,6 +300,9 @@
 
 @utility flex-start {
   @apply flex items-center justify-start;
+}
+@utility flex-start-center {
+  @apply flex items-start justify-center;
 }
 
 @utility flex-end {
@@ -419,6 +366,12 @@
   @apply text-[32px] font-[500] leading-[120%];
 }
 
+@utility bold-28 {
+  @apply text-[1.75rem] font-[500];
+}
+@utility bold-24 {
+  @apply text-[24px] font-[500];
+}
 @utility bold-20 {
   @apply text-[20px] font-[500];
 }
