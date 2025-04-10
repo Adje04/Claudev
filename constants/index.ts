@@ -123,28 +123,28 @@ export const PROJECTS = [
     source_code_link: "https://github.com/Adje04/forAcademy.git",
     website_link: ""
   },
-  {
-    name: "Nezon",
-    description:
-      "Site vitrine de restaurant permettant aux utilisateurs de réserver une table, commander des plats en ligne et découvrir l’offre culinaire du restaurant grâce à une interface moderne et intuitive.",
-    tags: [
-      {
-        name: "html",
-        color: "blue-text-gradient",
-      },
-      {
-        name: 'css',
-        color: "green-text-gradient",
-      },
-      {
-        name: "js",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: "/resto-nezon.png",
-    source_code_link: "https://github.com/Adje04/restoNezon.git",
-    website_link: "https://adje04.github.io/restoNezon"
-  },
+  // {
+  //   name: "Nezon",
+  //   description:
+  //     "Site vitrine de restaurant permettant aux utilisateurs de réserver une table, commander des plats en ligne et découvrir l’offre culinaire du restaurant grâce à une interface moderne et intuitive.",
+  //   tags: [
+  //     {
+  //       name: "html",
+  //       color: "blue-text-gradient",
+  //     },
+  //     {
+  //       name: 'css',
+  //       color: "green-text-gradient",
+  //     },
+  //     {
+  //       name: "js",
+  //       color: "pink-text-gradient",
+  //     },
+  //   ],
+  //   image: "/resto-nezon.png",
+  //   source_code_link: "https://github.com/Adje04/restoNezon.git",
+  //   website_link: "https://adje04.github.io/restoNezon"
+  // },
   {
     name: "ForChat",
     description:
