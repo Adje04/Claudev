@@ -121,7 +121,7 @@ export const PROJECTS = [
     ],
     image: "/hero section.svg",
     source_code_link: "https://github.com/Adje04/forAcademy.git",
-    website_link: "https://adje04.github.io/restoNezon"
+    website_link: ""
   },
   {
     name: "Nezon",

@@ -26,7 +26,7 @@ const Hero = () => {
               je transforme des idées en  <span className=' text-purple'>solutions numériques</span> percutantes
             </p>
             <div className="flex-start max-xs:flex-center gap-4" >
-              <Link href={'tel: +22893674548'}>
+              <Link href={'mailto: adjeeklou22@gmail.com'}>
                 <Button
                   type={'button'} title={'contact'}
                   variant="btn_yellow" />

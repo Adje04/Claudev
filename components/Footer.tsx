@@ -8,11 +8,11 @@ const Footer = () => {
   return (
     <footer className="w-full text-gray-20 mt-[3.5rem] max-container padding-container bg-[url(/footer-grid.svg)] bg-center bg-cover bg-no-repeat">
       <div className="flex flex-col items-center">
-        <h1 className="font-bold text-4xl md:text-5xl text-center lg:max-w-[45vw]">
-          Prêt à faire passer votre <span className="text-purple"></span>au niveau supérieur ?
+        <h1 className="font-bold text-3xl md:text-5xl text-center lg:max-w-[45vw]">
+          Prêt à faire passer votre <span className="text-purple">présence digitale</span>au niveau supérieur ?
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          Contactez-moi dès aujourd'hui et discutons ensemble de la manière dont je peux vous aider à atteindre vos objectifs.
+          Contactez-moi dès maintenant et discutons ensemble de la manière dont je peux vous aider à atteindre vos objectifs.
         </p>
 
         <Link href={'mailto: adjeeklou22@gmail.com'}>
