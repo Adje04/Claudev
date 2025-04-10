@@ -56,7 +56,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      <div className={`absolute top-full left-0 h-screen lg:h-auto bg-primary/50 backdrop-blur-md  shadow-md lg:static  w-[18.75rem] lg:w-auto lg:bg-transparent lg:shadow-none lg:flex ${navbar ? 'block' : 'hidden'}`}>
+      <div className={`absolute top-full left-0 h-screen lg:h-auto bg-primary backdrop-blur-lg shadow-md lg:static  w-[18.75rem] lg:w-auto lg:bg-transparent lg:shadow-none lg:flex ${navbar ? 'block' : 'hidden'}`}>
         <ul className="flex flex-col lg:flex-row lg:space-x-6 p-4 lg:p-0">
 
           {NAV_LINKS.map((link) => (

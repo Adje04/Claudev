@@ -107,7 +107,7 @@ export const PROJECTS = [
       "ForAcademy est le site vitrine en frontend d'une académie fictive de formation professionnelle. Il permet de découvrir les programmes offerts et de poser sa candidature en ligne facilement.",
     tags: [
       {
-        name: "Blade/ht",
+        name: "php",
         color: "green-text-gradient",
       },
       {
@@ -169,7 +169,7 @@ export const PROJECTS = [
       },
     ],
     image: "/discussions.svg",
-    source_code_link: "https://github.com/Adje04",
+    source_code_link: "https://github.com/Adje04/foruma-server-part.git",
     website_link: ""
   
   },
