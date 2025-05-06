@@ -49,7 +49,7 @@ const CardSkill = ({ title, icon: Icon, skills }: CardSkillProps) => {
         <div className="bg-white/5 rounded-lg px-6 pt-3 pb-6 relative sm:w-76 w-full min-h-auto transition-transform duration-300 hover:scale-110 hover:shadow-[4px_4px_0_#4f46e5] border border-purple">
             <h3 className="text-purple text-xl mb-4 flex items-center gap-2">
                 {Icon && <Icon />} 
-                {skillT(title)}
+                {skillT(title as keyof typeof skillT)}
             </h3>
             <ul className="flex flex-wrap gap-4">
                 {skills.map((skill, index) => (
