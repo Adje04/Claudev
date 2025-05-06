@@ -12,7 +12,7 @@ import { useI18n, useScopedI18n } from "@/locales/client";
 
 interface ServiceCardProps {
   index: number;
-  title: string;
+  title: typeof SERVICES[number]['title'];
   icon: string;
 }
 
@@ -29,14 +29,14 @@ const ServiceCard = ({ index, title, icon }: ServiceCardProps) => {
       >
         <Image
           src={icon}
-          alt={t(title)}
+          alt='service-type'
           width={64}
           height={64}
           className="w-16 h-16 object-contain"
         />
 
         <h3 className="text-white text-[20px] font-bold text-center">
-          {t(title)}
+          {t(title as keyof typeof t)}
         </h3>
       </div>
     </motion.div>
