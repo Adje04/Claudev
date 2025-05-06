@@ -12,7 +12,7 @@ import { useI18n, useScopedI18n } from "@/locales/client";
 
 interface ServiceCardProps {
   index: number;
-  title: typeof SERVICES[number]['title'];
+  title: string;
   icon: string;
 }
 
