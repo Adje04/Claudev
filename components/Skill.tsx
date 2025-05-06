@@ -6,6 +6,7 @@ import { IconType } from 'react-icons';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { textVariant } from './utils/motion';
+import { useScopedI18n } from '@/locales/client';
 
 
 interface Skill {
@@ -14,11 +15,12 @@ interface Skill {
 }
 
 const Skills = () => {
+    const skillT = useScopedI18n('skills')
     return (
         <section className="padding-container max-container mt-[2.5rem]" id='tech'>
             <motion.div variants={textVariant()}>
-                <p className="section-sub-text">Compétences</p>
-                <h2 className="section-head-text">Technologies.</h2>
+                <p className="section-sub-text">{skillT('skill')}</p>
+                <h2 className="section-head-text">{skillT('technologies')}</h2>
             </motion.div>
 
             <div className="flex justify-center items-stretch flex-row flex-wrap gap-10 mt-5">
@@ -42,11 +44,12 @@ interface CardSkillProps {
 }
 
 const CardSkill = ({ title, icon: Icon, skills }: CardSkillProps) => {
+    const skillT = useScopedI18n('skills')
     return (
         <div className="bg-white/5 rounded-lg px-6 pt-3 pb-6 relative sm:w-76 w-full min-h-auto transition-transform duration-300 hover:scale-110 hover:shadow-[4px_4px_0_#4f46e5] border border-purple">
             <h3 className="text-purple text-xl mb-4 flex items-center gap-2">
                 {Icon && <Icon />} 
-                {title}
+                {skillT(title)}
             </h3>
             <ul className="flex flex-wrap gap-4">
                 {skills.map((skill, index) => (

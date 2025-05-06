@@ -4,17 +4,17 @@ import { SiDatabricks } from 'react-icons/si';
 
 
 export const NAV_LINKS = [
-  { id: 1, href: '/', label: 'Accueil' },
-  { id: 2, href: '/#about', label: 'A propos' },
-  { id: 3, href: '/#projects', label: 'Projets' },
-  { id: 4, href: '/#tech', label: 'Tech' },
-  { id: 5, href: '/#contact', label: 'Contact' },
+  { id: 1, href: '/', label: 'home' },
+  { id: 2, href: '/#about', label: 'about' },
+  { id: 3, href: '/#projects', label: 'projects' },
+  { id: 4, href: '/#tech', label: 'tech' },
+  { id: 5, href: '/#contact', label: 'contact' },
 ];
 
 
 export const SKILL_DATA = [
   {
-    title: 'Frontend',
+    title: 'frontend',
     icon: FaCode,
     skills: [
       { name: 'HTML5', tech: "/tech-skill/logos--html-5.svg" },
@@ -25,7 +25,7 @@ export const SKILL_DATA = [
     ]
   },
   {
-    title: 'Backend',
+    title: 'backend',
     icon: FaServer,
     skills: [
 
@@ -37,7 +37,7 @@ export const SKILL_DATA = [
     ]
   },
   {
-    title: 'Bases de données',
+    title: 'database',
     icon: SiDatabricks,
     skills: [
       { name: 'MySQL', tech: "/tech-skill/skill-icons--mysql-dark.svg" },
@@ -47,7 +47,7 @@ export const SKILL_DATA = [
     ]
   },
   {
-    title: 'Design',
+    title: 'design',
     icon: FaPaintBrush,
     skills: [
       { name: 'Figma', tech: "/tech-skill/skill-icons--figma-dark.svg" },
@@ -60,120 +60,158 @@ export const SKILL_DATA = [
 
 export const SERVICES = [
   {
-    title: "Développement Frontend ",
+    title: "frontend",
     icon: '/tech/client.svg',
   },
   {
-    title: "Développement mobile",
+    title: "mobile",
     icon: '/tech/mobile.svg',
   },
   {
-    title: "Développement backend",
+    title: "backend",
     icon: '/tech/server.svg',
   },
   {
-    title: "Web design",
+    title: "design",
     icon: '/tech/design.svg',
   },
 ];
 
-
 export const PROJECTS = [
   {
-    name: "Trip Camp",
-    description:
-      "Plateforme en ligne qui permet aux utilisateurs de planifier et réserver des randonnées, du camping et d'autres aventures en plein air, avec la possibilité d'engager un guide et de tout organiser depuis le site.",
+    name: "tripcamp.name",
+    description: "tripcamp.description",
     tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "typescript",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwindcss",
-        color: "pink-text-gradient",
-      },
+      { name: "nextjs", color: "blue-text-gradient" },
+      { name: "typescript", color: "green-text-gradient" },
+      { name: "tailwindcss", color: "pink-text-gradient" },
     ],
     image: "/trip-camp.png",
     source_code_link: "https://github.com/Adje04/trip-camp.git",
     website_link: "https://trip-camp.vercel.app/"
   },
   {
-    name: "ForAcademy",
-    description:
-      "ForAcademy est le site vitrine en frontend d'une académie fictive de formation professionnelle. Il permet de découvrir les programmes offerts et de poser sa candidature en ligne facilement.",
+    name: "foracademy.name",
+    description: "foracademy.description",
     tags: [
-      {
-        name: "php",
-        color: "green-text-gradient",
-      },
-      {
-        name: 'Laravel/php',
-        color: "orange-text-gradient",
-      },
-      {
-        name: "js",
-        color: "yellow-text-gradient",
-      },
+      { name: "php", color: "green-text-gradient" },
+      { name: 'Laravel/php', color: "orange-text-gradient" },
+      { name: "js", color: "yellow-text-gradient" },
     ],
     image: "/hero section.svg",
     source_code_link: "https://github.com/Adje04/forAcademy.git",
     website_link: ""
   },
-  // {
-  //   name: "Nezon",
-  //   description:
-  //     "Site vitrine de restaurant permettant aux utilisateurs de réserver une table, commander des plats en ligne et découvrir l’offre culinaire du restaurant grâce à une interface moderne et intuitive.",
-  //   tags: [
-  //     {
-  //       name: "html",
-  //       color: "blue-text-gradient",
-  //     },
-  //     {
-  //       name: 'css',
-  //       color: "green-text-gradient",
-  //     },
-  //     {
-  //       name: "js",
-  //       color: "pink-text-gradient",
-  //     },
-  //   ],
-  //   image: "/resto-nezon.png",
-  //   source_code_link: "https://github.com/Adje04/restoNezon.git",
-  //   website_link: "https://adje04.github.io/restoNezon"
-  // },
   {
-    name: "ForChat",
-    description:
-      "Plateforme de discussion et de messagerie privée permettant aux utilisateurs de créer ou rejoindre des communautés partageant leurs centres d’intérêt et d’échanger en toute simplicité.",
+    name: "forchat.name",
+    description: "forchat.description",
     tags: [
-      {
-        name: "Nodejs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Rest API",
-        color: "yellow-text-gradient",
-      },
-
-      {
-        name: "MongoDB",
-        color: "green-text-gradient",
-      },
-      {
-        name: "React",
-        color: "pink-text-gradient",
-      },
+      { name: "Nodejs", color: "blue-text-gradient" },
+      { name: "Rest API", color: "yellow-text-gradient" },
+      { name: "MongoDB", color: "green-text-gradient" },
+      { name: "React", color: "pink-text-gradient" },
     ],
     image: "/discussions.svg",
     source_code_link: "https://github.com/Adje04/foruma-server-part.git",
     website_link: ""
-  
   },
 ];
+// export const PROJECTS = [
+//   {
+//     name: "Trip Camp",
+//     description:
+//       "Plateforme en ligne qui permet aux utilisateurs de planifier et réserver des randonnées, du camping et d'autres aventures en plein air, avec la possibilité d'engager un guide et de tout organiser depuis le site.",
+//     tags: [
+//       {
+//         name: "nextjs",
+//         color: "blue-text-gradient",
+//       },
+//       {
+//         name: "typescript",
+//         color: "green-text-gradient",
+//       },
+//       {
+//         name: "tailwindcss",
+//         color: "pink-text-gradient",
+//       },
+//     ],
+//     image: "/trip-camp.png",
+//     source_code_link: "https://github.com/Adje04/trip-camp.git",
+//     website_link: "https://trip-camp.vercel.app/"
+//   },
+//   {
+//     name: "ForAcademy",
+//     description:
+//       "ForAcademy est le site vitrine en frontend d'une académie fictive de formation professionnelle. Il permet de découvrir les programmes offerts et de poser sa candidature en ligne facilement.",
+//     tags: [
+//       {
+//         name: "php",
+//         color: "green-text-gradient",
+//       },
+//       {
+//         name: 'Laravel/php',
+//         color: "orange-text-gradient",
+//       },
+//       {
+//         name: "js",
+//         color: "yellow-text-gradient",
+//       },
+//     ],
+//     image: "/hero section.svg",
+//     source_code_link: "https://github.com/Adje04/forAcademy.git",
+//     website_link: ""
+//   },
+//   // {
+//   //   name: "Nezon",
+//   //   description:
+//   //     "Site vitrine de restaurant permettant aux utilisateurs de réserver une table, commander des plats en ligne et découvrir l’offre culinaire du restaurant grâce à une interface moderne et intuitive.",
+//   //   tags: [
+//   //     {
+//   //       name: "html",
+//   //       color: "blue-text-gradient",
+//   //     },
+//   //     {
+//   //       name: 'css',
+//   //       color: "green-text-gradient",
+//   //     },
+//   //     {
+//   //       name: "js",
+//   //       color: "pink-text-gradient",
+//   //     },
+//   //   ],
+//   //   image: "/resto-nezon.png",
+//   //   source_code_link: "https://github.com/Adje04/restoNezon.git",
+//   //   website_link: "https://adje04.github.io/restoNezon"
+//   // },
+//   {
+//     name: "ForChat",
+//     description:
+//       "Plateforme de discussion et de messagerie privée permettant aux utilisateurs de créer ou rejoindre des communautés partageant leurs centres d’intérêt et d’échanger en toute simplicité.",
+//     tags: [
+//       {
+//         name: "Nodejs",
+//         color: "blue-text-gradient",
+//       },
+//       {
+//         name: "Rest API",
+//         color: "yellow-text-gradient",
+//       },
+
+//       {
+//         name: "MongoDB",
+//         color: "green-text-gradient",
+//       },
+//       {
+//         name: "React",
+//         color: "pink-text-gradient",
+//       },
+//     ],
+//     image: "/discussions.svg",
+//     source_code_link: "https://github.com/Adje04/foruma-server-part.git",
+//     website_link: ""
+  
+//   },
+// ];
 
 
 export const SOCIALS_WORKS = [

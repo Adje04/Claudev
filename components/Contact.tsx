@@ -7,6 +7,7 @@ import { slideIn } from './utils/motion';
 import { toast, ToastContainer } from 'react-toastify';
 import { EarthCanvas } from "./canvas";
 import Button from './Button';
+import { useScopedI18n } from '@/locales/client';
 
 
 interface FormState { name: string; email: string; message: string; }
@@ -57,52 +58,54 @@ const Contact = () => {
 
     };
 
+    const contactT = useScopedI18n('contact')
+
     return (
         <section className="padding-container max-container mt-[3rem]" id= "contact">
             <div className="xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden">
                 <ToastContainer />
                 <motion.div variants={slideIn('left', 'tween', 0.2, 1)} className="flex-[0.75] 'bg-white/5 border border-purple p-5 rounded-2xl">
-                    <p className="section-sub-text">Me contacter</p>
+                    <p className="section-sub-text">{contactT('title')}</p>
                     <h3 className="section-head-text">Contact.</h3>
 
                     <form ref={formRef} onSubmit={handleSubmit} className="mt-12 flex flex-col gap-8">
                         <label className="flex flex-col">
-                            <span className="text-white font-medium mb-4">Votre nom</span>
+                            <span className="text-white font-medium mb-4">{contactT('name_label')}</span>
                             <input
                                 type="text"
                                 name="name"
                                 value={form.name}
                                 onChange={handleChange}
-                                placeholder="Quel est votre nom ?"
+                                placeholder={contactT('name_placeholder')}  
                                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
                             />
                         </label>
                         <label className="flex flex-col">
-                            <span className="text-white font-medium mb-4">Votre e-mail</span>
+                            <span className="text-white font-medium mb-4">{contactT('email_label')}</span>
                             <input
                                 type="email"
                                 name="email"
                                 value={form.email}
                                 onChange={handleChange}
-                                placeholder="Saisir votre adreese email ici"
+                                placeholder={contactT('email_placeholder')}
                                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
                             />
                         </label>
                         <label className="flex flex-col">
-                            <span className="text-white font-medium mb-4">Votre message</span>
+                            <span className="text-white font-medium mb-4">{contactT('message_label')}</span>
                             <textarea
                                 rows={7}
                                 name="message"
                                 value={form.message}
                                 onChange={handleChange}
-                                placeholder="Que souhaitez-vous dire ?"
+                                placeholder={contactT('message_placeholder')}
                                 className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
                             />
                         </label>
 
                         <Button
                             type="submit"
-                            title={loading ? 'Envoi en cours...' : 'Envoyer'}
+                            title={loading ? 'Envoi en cours...' : contactT('send')}
                             variant="btn_yellow w-full"
                         />
 

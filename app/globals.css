@@ -19,6 +19,7 @@
   background: linear-gradient(90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
   background: -webkit-linear-gradient(-90.13deg, #00cea8 1.9%, #bf61ff 97.5%);
 }
+
 .purple-yellow-gradient {
   background: "#00cea8";
   background: linear-gradient(90.13deg, #fab432 1.9%, #915EFF 97.5%);
@@ -197,6 +198,7 @@
         sm:w-[100px] sm:h-[150px] sm:bottom-[-30px] sm:right-[10px];
     }
   }
+  
 }
 
 
@@ -251,6 +253,7 @@
     animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
 }
+
 
 @utility max-container {
   @apply mx-auto max-w-[1440px];
@@ -382,18 +385,4 @@
 
 @utility bold-16 {
   @apply text-[16px] font-[700];
-}
-
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.hide-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.hide-scrollbar {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
 }

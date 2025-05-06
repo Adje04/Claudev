@@ -7,6 +7,7 @@ import Image from "next/image";
 import { SERVICES } from "../constants";
 import { fadeIn, textVariant } from "./utils/motion";
 import Button from "./Button";
+import { useI18n, useScopedI18n } from "@/locales/client";
 
 
 interface ServiceCardProps {
@@ -15,7 +16,9 @@ interface ServiceCardProps {
   icon: string;
 }
 
-const ServiceCard = ({ index, title, icon }: ServiceCardProps) => (
+const ServiceCard = ({ index, title, icon }: ServiceCardProps) => { 
+  const t = useScopedI18n('services')
+  return (
   <Tilt className="xs:w-[250px] w-full">
     <motion.div
       variants={fadeIn("right", "spring", index * 0.5, 0.75)}
@@ -26,46 +29,42 @@ const ServiceCard = ({ index, title, icon }: ServiceCardProps) => (
       >
         <Image
           src={icon}
-          alt={title}
+          alt={t(title)}
           width={64}
           height={64}
           className="w-16 h-16 object-contain"
         />
 
         <h3 className="text-white text-[20px] font-bold text-center">
-          {title}
+          {t(title)}
         </h3>
       </div>
     </motion.div>
-  </Tilt>
-);
+  </Tilt> )
+};
 
 const About = () => {
+  const scopedT = useScopedI18n('about')
+  const t = useScopedI18n('services')
   return (
     <section className="padding-container max-container mt-[2.5rem]" id='about'>
       <div className="flex flex-col flex-center gap-5 md:flex-row">
         <motion.div >
           <motion.div variants={textVariant()}>
-            <p className="section-sub-text">Introduction</p>
-            <h2 className="section-head-text">Aperçu.</h2>
+            <p className="section-sub-text">{scopedT('title')}</p>
+            <h2 className="section-head-text">{scopedT('overview')}</h2>
           </motion.div>
 
           <motion.p
             variants={fadeIn("", "", 0.1, 1)}
             className="my-4 text-secondary text-[17px]  max-w-3xl leading-[30px]"
           >
-            Je suis Développeur de logiciels qualifié avec de l'expérience en PhP,
-            TypeScript et JavaScript, et une expertise dans des frameworks comme
-            Laravel, Node.js et Nextjs.
-            J'apprends rapidement et je collabore étroitement avec les clients pour
-            créer des solutions efficaces, évolutives et conviviales qui résolvent
-            les problèmes du monde réel. Travaillons ensemble pour donner vie à vos
-            idées !
+           {scopedT('bio')}
           </motion.p>
 
-          <a href="/utils/Adjé Claude CV.pdf" download>
+          <a href="/utils/adje_claude_resume.pdf" download>
             <Button
-              type={'button'} title={'Telecharger CV'}
+              type={'button'} title={scopedT('cv')}
               variant="btn_yellow" />
           </a>
 
@@ -79,7 +78,7 @@ const About = () => {
           <ServiceCard
             key={service.title}
             index={index}
-            title={service.title}
+            title={(service.title)}
             icon={service.icon}
           />
         ))}

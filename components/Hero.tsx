@@ -4,9 +4,11 @@ import Link from "next/link";
 import Button from "./Button";
 import Image from "next/image";
 import { SOCIALS_WORKS } from "../constants";
-
+import { useScopedI18n } from "@/locales/client";
 
 const Hero = () => {
+  const scopedT = useScopedI18n('hero')
+
   return (
     <section className="padding-container max-container md:pt-[75px] pt-[30px] pb-8 bg-[url(/footer-grid.svg)] bg-center bg-cover">
       <div className="grid grid-cols-1 md:grid-cols-2 place-items-center">
@@ -17,13 +19,12 @@ const Hero = () => {
           </div>
           <div className="max-xs:text-center">
             <h1 className='text-secondary'>
-              <span className="bold-32"> Salut! Je suis </span>  <span className='hero-head-text text-purple'><br/>Adjé Claude</span>
+              <span className="bold-32"> {scopedT('greeting')} </span>  <span className='hero-head-text text-purple'><br/>Adjé Claude</span>
             </h1>
             <p className=' regular-18 leading-8 max-xs:regular-16 my-2 text-secondary'>
-               {/* Développeur d'applications <br  className="max-md:hidden"/>
-              <span className=' text-purple'> web <span className=' text-gray-10'>&</span> mobiles</span>  */}
-              <span className=' text-gray-10 max-xs:regular-18'>Développeur d’applications, </span>
-              je transforme des idées en  <span className=' text-purple'>solutions numériques</span> percutantes
+             
+              <span className=' text-gray-10 max-xs:regular-18'>{scopedT('role')} , </span>
+              {scopedT('detail-before')}  <span className=' text-purple'>{scopedT('detail-accent')} </span> {scopedT('detail-after')} 
             </p>
             <div className="flex-start max-xs:flex-center gap-4" >
               <Link href={'mailto: adjeeklou22@gmail.com'}>
