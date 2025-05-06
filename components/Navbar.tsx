@@ -68,7 +68,7 @@ const navT = useScopedI18n('nav')
                 className='regular-16 text-gray-10 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold hover:text-purple '
                 onClick={() => setNavbar(!navbar)}
               >
-                {navT(link.label)}
+                {navT(link.label as keyof typeof navT)}
 
               </Link>
             </li>
