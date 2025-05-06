@@ -21,7 +21,7 @@ export default {
         "bio": "Je suis Développeur de logiciels qualifié avec de l'expérience en PhP, TypeScript et JavaScript, et une expertise dans des frameworks comme Laravel, Node.js et Nextjs. J'apprends rapidement et je collabore étroitement avec les clients pour créer des solutions efficaces, évolutives et conviviales qui résolvent les problèmes du monde réel. Travaillons ensemble pour donner vie à vos idées !",
         "cv": "Télécharger CV",
     },
-    
+
     "services": {
         "frontend": "Développement Frontend",
         "mobile": "Développement mobile",
@@ -40,7 +40,7 @@ export default {
     "projects": {
         "title": "Mes travaux",
         "project": "Projets",
-        "description": "Les projets suivants mettent en valeur mes compétences et mon expérience à travers des exemples concrets de réalisations.",
+        "description": "Une plateforme en ligne qui permet aux utilisateurs de planifier et de réserver des randonnées, du camping et d'autres aventures en plein air. Les utilisateurs peuvent engager des guides et gérer l'ensemble de leur voyage directement sur le site",
         "tripcamp": {
             "name": "Trip Camp",
             "description": "Les projets suivants mettent en valeur mes compétences et mon expérience à travers des exemples concrets de réalisations."

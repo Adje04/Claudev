@@ -57,31 +57,6 @@ export default {
     },
 
 
-    // "projects": {
-    //     "title": "My works",
-    //     "project": "Projects",
-    //     "description": "The following projects highlight my skills and experience through real-world use cases.",
-    //     "tripcamp": {
-    //         "title": "Trip Camp",
-    //         "desc": "An online platform that allows users to plan and book hiking, camping, and other outdoor adventures. Users can hire guides and manage their entire trip directly through the site.",
-    //         "tags": ["Next.js", "TypeScript", "Tailwind CSS"],
-    //         "source": "Source Code"
-    //     },
-    //     "foracademy": {
-    //         "title": "ForAcademy",
-    //         "desc": "A showcase website for a fictional professional training academy. It presents the available programs and enables users to easily apply online.",
-    //         "tags": ["PHP", "Laravel/PHP", "JavaScript"],
-    //         "source": "Source Code"
-    //     },
-    //     "forchat": {
-    //         "title": "ForChat",
-    //         "desc": "A chat and private messaging platform that lets users create or join communities based on shared interests and communicate with ease.",
-    //         "tags": ["Node.js", "REST API", "MongoDB", "React"],
-    //         "source": "Source Code"
-    //     }
-    // },
-
-
     "contact": {
         "title": "Contact Me",
         "name_label": "Your Name",
