@@ -108,8 +108,6 @@ const Contact = () => {
                             title={loading ? 'Envoi en cours...' : contactT('send')}
                             variant="btn_yellow w-full"
                         />
-
-
                     </form>
                 </motion.div>
 

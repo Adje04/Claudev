@@ -40,10 +40,10 @@ export default {
     "projects": {
         "title": "Mes travaux",
         "project": "Projets",
-        "description": "Une plateforme en ligne qui permet aux utilisateurs de planifier et de réserver des randonnées, du camping et d'autres aventures en plein air. Les utilisateurs peuvent engager des guides et gérer l'ensemble de leur voyage directement sur le site",
+         "description": "Les projets suivants mettent en valeur mes compétences et mon expérience à travers des exemples concrets de réalisations.",
         "tripcamp": {
             "name": "Trip Camp",
-            "description": "Les projets suivants mettent en valeur mes compétences et mon expérience à travers des exemples concrets de réalisations."
+            "description": "Une plateforme en ligne qui permet aux utilisateurs de planifier et de réserver des randonnées, du camping et d'autres aventures en plein air. Les utilisateurs peuvent engager des guides et gérer l'ensemble de leur voyage directement sur le site"
         },
         "foracademy": {
             "name": "ForAcademy",
