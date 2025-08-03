@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Adje Claude – Développeur Backend",
+    title: "Adjé Claude – Développeur fullstack",
     description:
       "Portfolio de KPONON-EKLOU Adjé Claude – Développeur Laravel, Node.js, Next.js. Projets, solutions digitales, expertise technique.",
     images: ["/og-image.png"],
