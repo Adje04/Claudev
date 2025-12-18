@@ -7,7 +7,7 @@ export default {
         "contact": "Contact"
     },
     "hero": {
-        "greeting": "Hello ! I a m",
+        "greeting": "Hello! I am",
         "name": "Adjé Claude",
         "role": "As a Software Developer",
         "detail-before": "I transform ideas into powerful",
@@ -17,7 +17,7 @@ export default {
     "about": {
         "title": "Introduction",
         "overview": "Overview.",
-        "bio": "I'm a skilled software developer with solid experience in PHP, TypeScript, and JavaScript, and proven expertise in frameworks such as Laravel, Node.js, and Next.js. I’m a fast learner who works closely with clients to craft efficient, scalable, and user-friendly solutions that address real-world challenges. Let’s bring your ideas to life together!",
+        "bio": "I'm a skilled software developer with solid experience in PHP, TypeScript, and JavaScript, and I regularly work with frameworks such as Laravel, Next.js. I’m a fast learner who works closely with clients to craft efficient, scalable, and user-friendly solutions that address real-world challenges. Let’s bring your ideas to life together!",
         "cv": "Download CV",
     },
     "services": {
@@ -73,7 +73,7 @@ export default {
         "title_highlight": "digital presence",
         "title_after": "to the next level?",
         "description": "Reach out now, and let’s talk about how I can help bring your vision to life.",
-        "copyright": "Copyright © 2025 adjeeklou@gmail.com"
+        "copyright": "© {year} adjeeklou@gmail.com"
     }
 
 } as const

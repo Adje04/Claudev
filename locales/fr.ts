@@ -18,7 +18,7 @@ export default {
        
         "title": "Introduction",
         "overview": "Aperçu.",
-        "bio": "Je suis Développeur de logiciels qualifié avec de l'expérience en PhP, TypeScript et JavaScript, et une expertise dans des frameworks comme Laravel, Node.js et Nextjs. J'apprends rapidement et je collabore étroitement avec les clients pour créer des solutions efficaces, évolutives et conviviales qui résolvent les problèmes du monde réel. Travaillons ensemble pour donner vie à vos idées !",
+        "bio": "Je suis Développeur de logiciels qualifié avec de l'expérience en PhP, TypeScript et JavaScript, et je travaille régulièrement avec des frameworks comme Laravel et Nextjs. J'apprends rapidement et je collabore étroitement avec les clients pour créer des solutions efficaces, évolutives et conviviales qui résolvent les problèmes du monde réel. Travaillons ensemble pour donner vie à vos idées !",
         "cv": "Télécharger CV",
     },
 
@@ -71,6 +71,6 @@ export default {
         "title_highlight": "présence digitale",
         "title_after": "au niveau supérieur ?",
         "description": "Contactez-moi dès maintenant et discutons ensemble de la manière dont je peux vous aider à atteindre vos objectifs.",
-        "copyright": "Copyright © 2025 adjeeklou@gmail.com"
+        "copyright": "© {year} adjeeklou@gmail.com"
     }
 } as const

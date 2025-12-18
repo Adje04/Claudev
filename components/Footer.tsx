@@ -7,6 +7,7 @@ import { useI18n } from "@/locales/client";
 
 const Footer = () => {
   const t = useI18n();
+   const year = new Date().getFullYear()
   return (
     <footer className="w-full text-gray-20 mt-[3.5rem] max-container padding-container bg-[url(/footer-grid.svg)] bg-center bg-cover bg-no-repeat">
       <div className="flex flex-col items-center">
@@ -42,7 +43,7 @@ const Footer = () => {
           )}
         </div>
         <p className="md:text-base text-sm md:font-normal font-light">
-          {t("footer.copyright")}
+          {t("footer.copyright", {year})}
         </p>
       </div>
     </footer>
