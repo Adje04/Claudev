@@ -73,7 +73,7 @@ export default {
         "title_highlight": "digital presence",
         "title_after": "to the next level?",
         "description": "Reach out now, and let’s talk about how I can help bring your vision to life.",
-        "copyright": "© {year} adjeeklou@gmail.com"
+        "copyright": "© {year} adjeeklou22@gmail.com"
     }
 
 } as const

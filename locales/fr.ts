@@ -71,6 +71,6 @@ export default {
         "title_highlight": "présence digitale",
         "title_after": "au niveau supérieur ?",
         "description": "Contactez-moi dès maintenant et discutons ensemble de la manière dont je peux vous aider à atteindre vos objectifs.",
-        "copyright": "© {year} adjeeklou@gmail.com"
+        "copyright": "© {year} adjeeklou22@gmail.com"
     }
 } as const
