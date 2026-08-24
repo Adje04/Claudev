@@ -123,7 +123,7 @@ export const SOCIALS_WORKS = [
     links: [
       { id: 2, icon: FaGithub, href: 'https://github.com/Adje04' },
       { id: 3, icon: FaLinkedin, href: 'https://linkedin.com/in/adj%C3%A9-claude-kponon-eklou-468b16289/' },
-      { id: 1, icon: FaWhatsapp, href: 'https://wa.me/93674548' },
+      { id: 1, icon: FaWhatsapp, href: 'https://wa.me/33746490890' },
     ],
   }
 ];
